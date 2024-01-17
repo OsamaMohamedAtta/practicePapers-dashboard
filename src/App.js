@@ -38,7 +38,7 @@ function App() {
         <Route path='/questionType/:examBoardID' element={isAuth ? <QuestionType /> : <Navigate to='/auth' />} />
         <Route path='/unit/:questionTypeID' element={isAuth ? <Unit /> : <Navigate to='/auth' />} />
         <Route path='/chapter/:chapterID' element={isAuth ? <Chapter /> : <Navigate to='/auth' />} />
-        <Route path='/addQestion/:chapterName/:chapterID' element={isAuth ? <AddQestion /> : <Navigate to='/auth' />} />
+        <Route path='/addQestion/:chapterName/:chapterID/:unitID' element={isAuth ? <AddQestion /> : <Navigate to='/auth' />} />
       </Routes>
     </>
   );

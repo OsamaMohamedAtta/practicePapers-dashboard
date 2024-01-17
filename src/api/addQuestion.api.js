@@ -1,19 +1,18 @@
 const URL = 'http://localhost:8000/question/addQuestion'
 
-const addQestion = (data, setserverOperationError, setServerOperationLoading, setAllUnit) => {
+const addQestion = (data, setserverOperationError, setServerOperationLoading, setQuesionAdded, setQuesionID) => {
     setServerOperationLoading(true)
-    fetch(`${URL}${questionTypeID}`, {
+    fetch(`${URL}`, {
         method: 'post',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
+        body: data
     })
         .then((response) => response.json())
         .then((responseJson) => {
             if (responseJson.message === 'success') {
-                document.querySelector('.add-chapter-popup').classList.replace('d-flex', 'd-none');
+                setQuesionAdded(true)
+                setQuesionID(responseJson.questionData._id)
                 setServerOperationLoading(false)
                 setserverOperationError(null)
-                setAllUnit(responseJson.allUnit)
             } else {
                 setserverOperationError(responseJson.message)
                 setServerOperationLoading(false)

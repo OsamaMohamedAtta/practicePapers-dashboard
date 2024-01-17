@@ -63,7 +63,7 @@ const Chapter = () => {
             <div className='d-flex justify-content-space-between align-items-center'>
                 <p className='chapter-head-name'>{chapterDetails.chapterName}</p>
                 <div className='chapter-icon'>
-                    <Link to={`/addQestion/${chapterDetails.chapterName}/${chapterID}`}><i className="fa fa-plus" aria-hidden="true"></i></Link>
+                    <Link to={`/addQestion/${chapterDetails.chapterName}/${chapterID}/${chapterDetails.unit}`}><i className="fa fa-plus icon" aria-hidden="true"></i></Link>
                     <i onClick={() => openUpdatePopup(chapterDetails.chapterName)} className="fa fa-pencil" aria-hidden="true"></i>
                     <i className="fa fa-trash-o" aria-hidden="true"></i>
                 </div>
