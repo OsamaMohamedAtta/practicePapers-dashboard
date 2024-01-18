@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import getChapter from '../../api/getChapter.api'
 import updateChapter from '../../api/updateChapter.api'
-import deleteUnit from '../../api/deleteUnit.api'
+import deleteQuestion from '../../api/deleteQuestion.api'
 import addChapter from '../../api/addChapter.api'
 import addUnit from '../../api/addUnit.api'
 import 'mathlive';
@@ -15,6 +15,7 @@ const Chapter = () => {
     const [serverOperationError, setserverOperationError] = useState(null)
     const [serverOperationLoading, setServerOperationLoading] = useState(false)
     const [chapterName, setChapterName] = useState('')
+    const [questionID, setQuestionID] = useState('')
     const [question, setQuestion] = useState('')
     const [answer, setAnswer] = useState('')
     const [questionPoint, setQuestionPoint] = useState(0)
@@ -56,6 +57,21 @@ const Chapter = () => {
     }
     // update chapter func end    
 
+    // delete question func start  
+    const openDeleteQuestionPopup = (quesionID) => {
+        setQuestionID(quesionID)
+        document.querySelector('.delete-question-popup').classList.replace('d-none', 'd-flex');
+    }
+
+    const closeDeleteQuestionPopup = () => {
+        document.querySelector('.delete-question-popup').classList.replace('d-flex', 'd-none');
+    }
+
+    const deleteTheQuestion = () => {
+        deleteQuestion(questionID, chapterID, setserverOperationError, setServerOperationLoading, setChapterDetails)
+    }
+    // delete question func end    
+
     if (loading) return (<div className='loading-container'><div className='d-flex justify-content-center'><span className="page-loader"></span></div></div>)
 
     return (
@@ -63,14 +79,20 @@ const Chapter = () => {
             <div className='d-flex justify-content-space-between align-items-center'>
                 <p className='chapter-head-name'>{chapterDetails.chapterName}</p>
                 <div className='chapter-icon'>
-                    <Link to={`/addQestion/${chapterDetails.chapterName}/${chapterID}/${chapterDetails.unit}`}><i className="fa fa-plus icon" aria-hidden="true"></i></Link>
+                    <Link to={`/addQuestion/${chapterDetails.chapterName}/${chapterID}/${chapterDetails.unit}`}><i className="fa fa-plus icon" aria-hidden="true"></i></Link>
                     <i onClick={() => openUpdatePopup(chapterDetails.chapterName)} className="fa fa-pencil" aria-hidden="true"></i>
                     <i className="fa fa-trash-o" aria-hidden="true"></i>
                 </div>
             </div>
             {chapterDetails.questions?.map(item => {
                 return (
-                    <p key={item._id} className='question'>{item.question}</p>
+                    <div key={item._id} className='question d-flex justify-content-space-between'>
+                        <p>{item.question}</p>
+                        <div>
+                            <Link to={`/updateQuestion/${item._id}`}><i className="fa fa-pencil icon" aria-hidden="true"></i></Link>
+                            <i onClick={() => openDeleteQuestionPopup(item._id)} className="fa fa-trash-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
                 )
             })}
             {/* update chapter popup start */}
@@ -84,6 +106,17 @@ const Chapter = () => {
                 </div>
             </div>
             {/* update chapter popup end */}
+
+            {/* delete question popup start */}
+            <div className="delete-question-popup chapter-popup d-none justify-content-center align-items-center">
+                <div>
+                    <p className='text-color'>Are you sure you want to delete this question?</p>
+                    {(serverOperationError) ? <p className='text-error'>{serverOperationError}</p> : ''}
+                    <button className='button' onClick={deleteTheQuestion}>{(serverOperationLoading) ? <span className="button-loader"></span> : 'Delete'}</button>
+                    <button className='button' onClick={closeDeleteQuestionPopup}>Cancel</button>
+                </div>
+            </div>
+            {/* delete chapter popup end */}
         </div>
     );
 }

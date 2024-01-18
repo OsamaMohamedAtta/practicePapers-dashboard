@@ -1,6 +1,6 @@
 const URL = 'http://localhost:8000/question/updateAnswerPic/'
 
-const addAnswerPic = (data, quesionID, setserverOperationError, setServerLoadingPic, setQuesionFullAdded) => {
+const addAnswerPic = (data, quesionID, setserverOperationError, setServerLoadingPic, setQuesionFullAdded, endPoint, navigate, chapterID) => {
     setServerLoadingPic(true)
     fetch(`${URL}${quesionID}`, {
         method: 'put',
@@ -9,9 +9,13 @@ const addAnswerPic = (data, quesionID, setserverOperationError, setServerLoading
         .then((response) => response.json())
         .then((responseJson) => {
             if (responseJson.message === 'success') {
-                setQuesionFullAdded(true)
                 setServerLoadingPic(false)
                 setserverOperationError(null)
+                if(endPoint == 'add'){
+                    setQuesionFullAdded(true)
+                }else{
+                    navigate(`/chapter/${chapterID}`)
+                }
             } else {
                 setserverOperationError(responseJson.message)
                 setServerLoadingPic(false)

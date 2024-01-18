@@ -6,7 +6,8 @@ import ExamBoard from './pages/examBoard/ExamBoard'
 import QuestionType from './pages/questionType/QuestionType'
 import Unit from './pages/unit/Unit'
 import Chapter from './pages/chapter/Chapter'
-import AddQestion from './pages/addQuestion/AddQestion'
+import AddQuestion from './pages/addQuestion/AddQuestion'
+import UpdateQuestion from './pages/updateQestion/UpdateQuestion'
 
 function App() {
   useEffect(() => {
@@ -38,7 +39,8 @@ function App() {
         <Route path='/questionType/:examBoardID' element={isAuth ? <QuestionType /> : <Navigate to='/auth' />} />
         <Route path='/unit/:questionTypeID' element={isAuth ? <Unit /> : <Navigate to='/auth' />} />
         <Route path='/chapter/:chapterID' element={isAuth ? <Chapter /> : <Navigate to='/auth' />} />
-        <Route path='/addQestion/:chapterName/:chapterID/:unitID' element={isAuth ? <AddQestion /> : <Navigate to='/auth' />} />
+        <Route path='/addQuestion/:chapterName/:chapterID/:unitID' element={isAuth ? <AddQuestion /> : <Navigate to='/auth' />} />
+        <Route path='/updateQuestion/:qestionID' element={isAuth ? <UpdateQuestion /> : <Navigate to='/auth' />} />
       </Routes>
     </>
   );
