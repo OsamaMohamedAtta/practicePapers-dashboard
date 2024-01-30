@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/practicePapers-dashboard/static/css/main.8c3d7abd.css",
+    "main.css": "/practicePapers-dashboard/static/css/main.6d350d42.css",
     "main.js": "/practicePapers-dashboard/static/js/main.22c9aa8b.js",
     "static/js/27.841842b5.chunk.js": "/practicePapers-dashboard/static/js/27.841842b5.chunk.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/practicePapers-dashboard/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
@@ -13,7 +13,7 @@
     "index.html": "/practicePapers-dashboard/index.html"
   },
   "entrypoints": [
-    "static/css/main.8c3d7abd.css",
+    "static/css/main.6d350d42.css",
     "static/js/main.22c9aa8b.js"
   ]
 }
