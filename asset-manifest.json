@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/practicePapers-dashboard/static/css/main.2bb94e0f.css",
-    "main.js": "/practicePapers-dashboard/static/js/main.22c9aa8b.js",
-    "static/js/27.841842b5.chunk.js": "/practicePapers-dashboard/static/js/27.841842b5.chunk.js",
+    "main.css": "/practicePapers-dashboard/static/css/main.a326790b.css",
+    "main.js": "/practicePapers-dashboard/static/js/main.fb37e0b4.js",
+    "static/js/787.bda316ad.chunk.js": "/practicePapers-dashboard/static/js/787.bda316ad.chunk.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/practicePapers-dashboard/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/fontawesome-webfont.eot": "/practicePapers-dashboard/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/practicePapers-dashboard/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
@@ -10,10 +10,13 @@
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/practicePapers-dashboard/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "static/media/logo.png": "/practicePapers-dashboard/static/media/logo.abdd59c0966be65eb426.png",
     "static/media/correct-icon.png": "/practicePapers-dashboard/static/media/correct-icon.46720a7afbfe28ffc43b.png",
-    "index.html": "/practicePapers-dashboard/index.html"
+    "index.html": "/practicePapers-dashboard/index.html",
+    "main.a326790b.css.map": "/practicePapers-dashboard/static/css/main.a326790b.css.map",
+    "main.fb37e0b4.js.map": "/practicePapers-dashboard/static/js/main.fb37e0b4.js.map",
+    "787.bda316ad.chunk.js.map": "/practicePapers-dashboard/static/js/787.bda316ad.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2bb94e0f.css",
-    "static/js/main.22c9aa8b.js"
+    "static/css/main.a326790b.css",
+    "static/js/main.fb37e0b4.js"
   ]
 }
