@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/practicePapers-dashboard/static/css/main.a326790b.css",
-    "main.js": "/practicePapers-dashboard/static/js/main.fb37e0b4.js",
+    "main.js": "/practicePapers-dashboard/static/js/main.25be193c.js",
     "static/js/787.bda316ad.chunk.js": "/practicePapers-dashboard/static/js/787.bda316ad.chunk.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/practicePapers-dashboard/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/fontawesome-webfont.eot": "/practicePapers-dashboard/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
@@ -12,11 +12,11 @@
     "static/media/correct-icon.png": "/practicePapers-dashboard/static/media/correct-icon.46720a7afbfe28ffc43b.png",
     "index.html": "/practicePapers-dashboard/index.html",
     "main.a326790b.css.map": "/practicePapers-dashboard/static/css/main.a326790b.css.map",
-    "main.fb37e0b4.js.map": "/practicePapers-dashboard/static/js/main.fb37e0b4.js.map",
+    "main.25be193c.js.map": "/practicePapers-dashboard/static/js/main.25be193c.js.map",
     "787.bda316ad.chunk.js.map": "/practicePapers-dashboard/static/js/787.bda316ad.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a326790b.css",
-    "static/js/main.fb37e0b4.js"
+    "static/js/main.25be193c.js"
   ]
 }
